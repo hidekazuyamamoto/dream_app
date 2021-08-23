@@ -1,0 +1,50 @@
+.header{
+  height: 10vh;
+  background-color: aqua;
+  display: flex;
+  justify-content: space-between;
+}
+.title{
+  background-color: tomato;
+  width: 20vw;
+  height: 10vh;
+  text-align: center;
+}
+.title-content{
+  font-weight: 900;
+  color: aliceblue;
+  text-decoration: none;
+  font-size: 30px;
+  display: block;
+  height: 60%;
+  margin-top:20px ;
+}
+.user-function{
+  background-color: violet;
+  width: 30vw;
+  height: 10vh;
+  display: flex;
+}
+.user-functions{
+  width: 50%;
+  height: 60%;
+  margin-top:20px ;
+  font-weight: 900;
+}
+.user-content{
+  margin-top: 0;  
+  font-size: 30px;
+  margin-left: 50px;
+  text-decoration: none;
+}
+.footer{
+  height: 10vh;
+  background-color: black;
+  text-align: center;
+  padding-top: 50px;
+}
+.footertext{
+  margin-top: 0px;
+  color: white;
+  font-size: 30px;
+}

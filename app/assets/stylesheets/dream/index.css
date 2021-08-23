@@ -1,9 +1,6 @@
-.main{
-  background-color: azure;
-}
+
 .concept{
   text-align: center;
-  padding-top:60px ;
 }
 .concept-message{
   margin: 0 auto 60px;
@@ -36,10 +33,7 @@
   border: 3px solid black;
   border-radius: 20px;
 }
-.others-dreams{
-  height: 80vh;
-  background-color: rgb(208, 192, 223);
-}
+
 .others-dreams-content{
   display: flex;
   justify-content: space-around;

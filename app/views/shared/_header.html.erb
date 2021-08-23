@@ -4,10 +4,10 @@
   </div>
   <div class="user-function">
     <div class="user-functions">
-      <a href="#" class="user-content">ログイン</a>
+      <%=link_to "ログイン", new_user_session_path, class:"user-content" %> 
     </div>
     <div class="user-functions">
-      <a href="#" class="user-content">新規登録</a>
+      <%=link_to "新規登録", new_user_registration_path, class:"user-content" %>
     </div>
   </div>
 </div>

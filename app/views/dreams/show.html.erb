@@ -1,2 +1,40 @@
 <%= render "shared/header" %>
+<div class="main">
+  <div class="profilecontents">
+    <div class="profiles">
+      <div class="userprofiles">
+        <div class="userimage">
+        <%=image_tag "gal_o_man.png" ,class:"userimagecontent"%>
+        </div>
+        <div class="username">
+        <h1 class="usernamecontent">名前</h1>
+        </div>
+        <div class="uesrexplanation">
+        <p class="uesrexplanationcontent">せつめい</p>
+        </div>
+      </div>
+      <div class="usermissions">
+        <div class="usermission">
+        <h1 class="usermissioncontent">test</h1>
+        </div>
+        <div class="usermissionexplanation">
+        <p class="usermissionexplanationcontent">test</p>
+        </div>
+      </div>
+    </div>
+    <div class="SNSurls">
+      <div class="URLs">
+        <a href="#" id="URLfacebook"><%=image_tag "icon_017870_256.png" ,class:"icon"%>facebook</a>
+      </div>
+      <div class="URLs">
+        <a href="#" id="URLtwitter"><%=image_tag "icon_017890_256.png" ,class:"icon"%>twitter</a>
+      </div>
+      <div class="URLs">
+        <a href="#" id="URLinstagram"><%=image_tag "icon_062470_256.png" ,class:"icon"%>instagram</a>
+      </div>
+    </div>
+  </div>
+  <div class="useritem">
+  </div>
+</div>
 <%= render "shared/footer" %>

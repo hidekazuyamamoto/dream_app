@@ -1,0 +1,100 @@
+.profilecontents{
+  height: 60vh;
+  width: 70vw;
+  margin: 0 auto;
+}
+.profiles{
+  height: 90%;
+  display: flex;
+}
+.userprofiles{
+  width: 25%;
+}
+.userimage{
+  height: 50%;
+}
+.userimagecontent{
+  height: 90%;
+  width: 90%;
+  margin: 10px;
+}
+.username{
+  height: 10%;
+  text-align: center;
+}
+.usernamecontent{
+  margin: 0px;
+}
+.uesrexplanation{
+  height: 35%;
+  padding: 10px;
+}
+.uesrexplanationcontent{
+  margin: 0;
+  overflow-wrap: break-word;
+  text-align: center;
+}
+.usermissions{
+  width: 75%;
+}
+.usermission{
+  height: 40%;
+
+}
+.usermissioncontent{
+  margin: 0;
+  text-align: center;
+  font-size: 100px;
+}
+.usermissionexplanation{
+  height: 60%;
+
+}
+.usermissionexplanationcontent{
+  margin: 0;
+  text-align: center;
+  font-size: 30px;
+}
+.SNSurls{
+  height: 5%;
+  display: flex;
+  justify-content: space-around;
+}
+.URLs{
+  display: flex;
+}
+#URLfacebook{
+  display: block;
+  text-decoration: none;
+  font-weight: 900;
+  background-color: white;
+  color: blue;
+  padding: 0 10px 5px;
+  box-shadow: 2px 2px 4px black;
+}
+.icon{
+  height: 15px;
+  width: 15px;
+  margin-right: 5px;
+}
+#URLtwitter{
+  display: block;
+  text-decoration: none;
+  font-weight: 900;
+  background-color: rgb(1, 183, 255);
+  color:white;
+  padding: 0 10px 0;
+  box-shadow: 2px 2px 4px black;
+}
+#URLinstagram{
+  display: block;
+  text-decoration: none;
+  font-weight: 900;
+  background-color: rgb(255, 0, 157);
+  color:white;
+  padding: 0 10px 0;
+  box-shadow: 2px 2px 4px black;
+}
+.useritem{
+  height: 40vh;
+}

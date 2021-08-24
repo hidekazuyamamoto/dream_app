@@ -33,6 +33,7 @@
         <a href="#" id="URLinstagram"><%=image_tag "icon_062470_256.png" ,class:"icon"%>instagram</a>
       </div>
     </div>
+    <%= link_to "編集する", new_dream_main_profile_path(current_user.id)%>
   </div>
   <div class="useritem">
     <h1 class="useritemtitle">支援要項</h1>

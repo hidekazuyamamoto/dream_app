@@ -8,7 +8,7 @@
       <%=link_to "ログアウト", destroy_user_session_path, method: :delete, class:"user-content" %> 
       </div>
       <div class="user-functions">
-      <%=link_to "マイページ", "#", class:"user-content" %>
+      <%=link_to "マイページ", dream_path(current_user.id), class:"user-content" %>
       </div>
     <%else%>
       <div class="user-functions">

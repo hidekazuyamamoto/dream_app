@@ -1,13 +1,22 @@
 <div class="header">
   <div class="title">
-    <a href="#" class="title-content">DREAM</a>
+    <%= link_to "DREAM", root_path, class:"title-content" %>
   </div>
   <div class="user-function">
-    <div class="user-functions">
-      <a href="#" class="user-content">ログイン</a>
-    </div>
-    <div class="user-functions">
-      <a href="#" class="user-content">新規登録</a>
-    </div>
+    <% if user_signed_in? %>
+      <div class="user-functions">
+      <%=link_to "ログアウト", destroy_user_session_path, method: :delete, class:"user-content" %> 
+      </div>
+      <div class="user-functions">
+      <%=link_to "マイページ", "#", class:"user-content" %>
+      </div>
+    <%else%>
+      <div class="user-functions">
+        <%=link_to "ログイン", new_user_session_path, class:"user-content" %> 
+      </div>
+      <div class="user-functions">
+        <%=link_to "新規登録", new_user_registration_path, class:"user-content" %>
+      </div>
+    <%end%>
   </div>
 </div>

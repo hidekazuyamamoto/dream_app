@@ -1,0 +1,26 @@
+<%= render "shared/header" %>
+<div class="main">
+  <%=form_with model: @user, url: user_registration_path,class:"form", local: true do |f|%>
+    <h1 class="formmaintitle">新規登録</h1>
+    <div class="formcontens">
+    <p class="formtitle">名前<span class="indispensable">*必須</span></p>
+    <%= f.text_area :name, class:"formname", maxlength:"20" %>
+    </div>
+    <div class="formcontens">
+    <p class="formtitle">E-mail<span class="indispensable">*必須</span></p>
+    <%= f.text_area :email, class:"formname", maxlength:"20" %>
+    </div>
+    <div class="formcontens">
+    <p class="formtitle">パスワード<span class="indispensable">*必須</span></p>
+    <%= f.password_field :password, class:"formname", maxlength:"20" %>
+    </div>
+    <div class="formcontens">
+    <p class="formtitle">パスワード（確認）<span class="indispensable">*必須</span></p>
+    <%= f.password_field :password_confirmation, class:"formname", maxlength:"20" %>
+    </div>
+    <div class="formcontens">
+    <%= f.submit "登録する" ,class:"submitbtn"%>
+    </div>
+  <%end%>
+</div>
+<%= render "shared/footer" %>

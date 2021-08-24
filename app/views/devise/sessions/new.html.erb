@@ -1,0 +1,18 @@
+<%= render "shared/header" %>
+<div class="main">
+  <%=form_with model: @user, url:new_user_session_path,class:"form", local: true do |f|%>
+    <h1 class="formmaintitle">ログイン</h1>
+    <div class="formcontens">
+    <p class="formtitle">E-mail<span class="indispensable">*必須</span></p>
+    <%= f.text_area :email, class:"formname", maxlength:"20" %>
+    </div>
+    <div class="formcontens">
+    <p class="formtitle">パスワード<span class="indispensable">*必須</span></p>
+    <%= f.password_field :password, class:"formname", maxlength:"20" %>
+    </div>
+    <div class="formcontens">
+    <%= f.submit "ログインする" ,class:"submitbtn"%>
+    </div>
+  <%end%>
+</div>
+<%= render "shared/footer" %>

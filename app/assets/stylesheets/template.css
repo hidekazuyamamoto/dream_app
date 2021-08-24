@@ -35,6 +35,10 @@
   margin-left: 50px;
   text-decoration: none;
 }
+.main{
+  background-color: azure;
+  padding: 60px 0 60px;
+}
 .footer{
   height: 10vh;
   background-color: black;

@@ -3,6 +3,14 @@
   <%=form_with model: @main_profile, class:"form", local: true do |f|%>
     <h1 class="formmaintitle">プロフィー設定</h1>
     <div class="formcontens">
+    <div class="formcontens">
+    <p class="formtitle">名前<span class="indispensable">*必須</span></p>
+    <%= f.text_field :name, class:"formname", maxlength:"20" %>
+    </div>
+    <div class="formcontens">
+    <p class="formtitle">プロフィール</p>
+    <%= f.text_area :user_profile, class:"formname", maxlength:"20" %>
+    </div>
     <p class="formtitle">ミッション<span class="indispensable">*必須</span></p>
     <%= f.text_field :mission, class:"formname", maxlength:"20" %>
     </div>

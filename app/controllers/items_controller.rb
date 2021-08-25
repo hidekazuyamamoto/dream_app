@@ -10,4 +10,7 @@ class ItemsController < ApplicationController
       render :new
     end
   end
+  private
+  def params_main_profile
+    params.require(:item).permit(:item_image, :name, :explanation, :price).merge(user_id: current_user.id)
 end

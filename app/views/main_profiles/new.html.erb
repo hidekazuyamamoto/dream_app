@@ -3,35 +3,39 @@
   <%=form_with model: @main_profile, class:"form", local: true do |f|%>
     <h1 class="formmaintitle">プロフィー設定</h1>
     <div class="formcontens">
-    <div class="formcontens">
-    <p class="formtitle">名前<span class="indispensable">*必須</span></p>
-    <%= f.text_field :name, class:"formname", maxlength:"20" %>
+      <p class="formtitle">画像</p>
+      <%= f.file_field :image, class:"fileformname" %>
     </div>
     <div class="formcontens">
-    <p class="formtitle">プロフィール</p>
-    <%= f.text_area :user_profile, class:"formname", maxlength:"20" %>
-    </div>
-    <p class="formtitle">ミッション<span class="indispensable">*必須</span></p>
-    <%= f.text_field :mission, class:"formname", maxlength:"20" %>
+      <p class="formtitle">名前<span class="indispensable">*必須</span></p>
+      <%= f.text_field :name, class:"formname", maxlength:"20" %>
     </div>
     <div class="formcontens">
-    <p class="formtitle">ミッションの説明</p>
-    <%= f.text_area :mission_ex, class:"formname" %>
+      <p class="formtitle">プロフィール</p>
+      <%= f.text_area :user_profile, class:"formname", maxlength:"20" %>
     </div>
     <div class="formcontens">
-    <p class="formtitle">twitter（URL）</p>
-    <%= f.text_field :URL_twitter, class:"formname" %>
+      <p class="formtitle">ミッション<span class="indispensable">*必須</span></p>
+      <%= f.text_field :mission, class:"formname", maxlength:"20" %>
     </div>
     <div class="formcontens">
-    <p class="formtitle">facebook（URL）</p>
-    <%= f.text_field :URL_facebook, class:"formname"%>
+      <p class="formtitle">ミッションの説明</p>
+      <%= f.text_area :mission_ex, class:"formname" %>
     </div>
     <div class="formcontens">
-    <p class="formtitle">instagram（URL）</p>
-    <%= f.text_field :URL_instagram, class:"formname" %>
+      <p class="formtitle">twitter（URL）</p>
+      <%= f.text_field :URL_twitter, class:"formname" %>
     </div>
     <div class="formcontens">
-    <%= f.submit "登録する" ,class:"submitbtn"%>
+      <p class="formtitle">facebook（URL）</p>
+      <%= f.text_field :URL_facebook, class:"formname"%>
+    </div>
+    <div class="formcontens">
+      <p class="formtitle">instagram（URL）</p>
+      <%= f.text_field :URL_instagram, class:"formname" %>
+    </div>
+    <div class="formcontens">
+      <%= f.submit "登録する" ,class:"submitbtn"%>
     </div>
   <%end%>
 </div>

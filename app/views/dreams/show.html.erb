@@ -5,7 +5,11 @@
       <div class="profiles">
         <div class="userprofiles">
           <div class="userimage">
+          <%if @main_profile.image.present?%>
+          <%= image_tag @main_profile.image, class:"userimagecontent"%>
+          <%else%>
           <%=image_tag "gal_o_man.png" ,class:"userimagecontent"%>
+          <%end%>
           </div>
           <div class="username">
           <h1 class="usernamecontent"><%=@main_profile.name%></h1>
@@ -91,7 +95,7 @@
           <a href="#" id="URLinstagram"><%=image_tag "icon_062470_256.png" ,class:"icon"%>instagram</a>
         </div>
       </div>
-      <%= link_to "編集する", new_main_profile_path%>
+      <%= link_to "作成する", new_main_profile_path%>
     </div>
   <%end%>
   <div class="useritem">

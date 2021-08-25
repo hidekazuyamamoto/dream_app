@@ -1,0 +1,83 @@
+<%= render "shared/header" %>
+<div class="main">
+  <div class="profilecontents">
+    <div class="profiles">
+      <div class="userprofiles">
+        <div class="userimage">
+        <%=image_tag "gal_o_man.png" ,class:"userimagecontent"%>
+        </div>
+        <div class="username">
+        <h1 class="usernamecontent"><%=@user.name %> </h1>
+        </div>
+        <div class="uesrexplanation">
+        <p class="uesrexplanationcontent">せつめい</p>
+        </div>
+      </div>
+      <div class="usermissions">
+        <div class="usermission">
+        <h1 class="usermissioncontent"><%= @main_profile.mission%></h1>
+        </div>
+        <div class="usermissionexplanation">
+        <p class="usermissionexplanationcontent"><%= @main_profile.mission_ex %> </p>
+        </div>
+      </div>
+    </div>
+    <div class="SNSurls">
+      <div class="URLs">
+        <%if @main_profile.URL_facebook.present?%>
+          <%= link_to "#{@main_profile.URL_facebook}" ,id:"URLfacebook" do %>
+          <%=image_tag "icon_017870_256.png" ,class:"icon"%>
+          facebook
+          <%end%>
+        <%else%>
+          <a href="#" id="URLfacebook"><%=image_tag "icon_017870_256.png" ,class:"icon"%>facebook</a>
+        <%end%>
+      </div>
+      <div class="URLs">
+        <%if @main_profile.URL_twitter.present?%>
+          <%= link_to "#{@main_profile.URL_twitter}" ,id:"URLtwitter" do %>
+          <%=image_tag "icon_017870_256.png" ,class:"icon"%>
+          twitter
+          <%end%>
+        <%else%>
+          <a href="#" id="URLtwitter"><%=image_tag "icon_017890_256.png" ,class:"icon"%>twitter</a>
+        <%end%>
+      </div>
+      <div class="URLs">
+        <%if @main_profile.URL_instagram.present?%>
+          <%= link_to "#{@main_profile.URL_instagram}" ,id:"URLinstagram" do %>
+          <%=image_tag "icon_017870_256.png" ,class:"icon"%>
+          instagram
+          <%end%>
+        <%else%>
+        <a href="#" id="URLinstagram"><%=image_tag "icon_062470_256.png" ,class:"icon"%>instagram</a>
+        <%end%>
+      </div>
+    </div>
+    <%= link_to "編集する", new_main_profile_path%>
+  </div>
+  <div class="useritem">
+    <h1 class="useritemtitle">支援要項</h1>
+    <div class="useritemcontents">
+      <div class="useritemcontent">
+        <div class="useritemcontentimage">
+          <%=image_tag "gal_o_man.png" ,class:"userimagecontent"%>
+        </div>
+        <h1 class="useritemcontenttitle">アイテム名</h1>
+      </div>
+      <div class="useritemcontent">
+        <div class="useritemcontentimage">
+          <%=image_tag "gal_o_man.png" ,class:"userimagecontent"%>
+        </div>
+        <h1 class="useritemcontenttitle">アイテム名</h1>
+      </div>
+      <div class="useritemcontent">
+          <div class="useritemcontentimage">
+        <%=image_tag "gal_o_man.png" ,class:"userimagecontent"%>
+        </div>
+        <h1 class="useritemcontenttitle">アイテム名</h1>
+      </div>
+    </div>
+  </div>
+</div>
+<%= render "shared/footer" %>

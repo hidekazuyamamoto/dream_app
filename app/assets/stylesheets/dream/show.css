@@ -1,0 +1,128 @@
+.profilecontents{
+  height: 60vh;
+  width: 70vw;
+  margin: 0 auto;
+  background-color: rgb(221, 255, 244);
+  box-shadow: 2px 2px 4px gray;
+}
+.profiles{
+  height: 90%;
+  display: flex;
+}
+.userprofiles{
+  width: 25%;
+}
+.userimage{
+  height: 50%;
+}
+.userimagecontent{
+  height: 90%;
+  width: 90%;
+  margin: 10px;
+}
+.username{
+  height: 10%;
+  text-align: center;
+}
+.usernamecontent{
+  margin: 0px;
+}
+.uesrexplanation{
+  height: 35%;
+  padding: 10px;
+}
+.uesrexplanationcontent{
+  margin: 0;
+  overflow-wrap: break-word;
+  text-align: center;
+}
+.usermissions{
+  width: 75%;
+}
+.usermission{
+  height: 40%;
+
+}
+.usermissioncontent{
+  margin: 0;
+  text-align: center;
+  font-size: 100px;
+}
+.usermissionexplanation{
+  height: 60%;
+
+}
+.usermissionexplanationcontent{
+  margin: 0;
+  text-align: center;
+  font-size: 30px;
+}
+.SNSurls{
+  height: 5%;
+  display: flex;
+  justify-content: space-around;
+}
+.URLs{
+  display: flex;
+}
+#URLfacebook{
+  display: block;
+  text-decoration: none;
+  font-weight: 900;
+  background-color: white;
+  color: blue;
+  padding: 0 10px 5px;
+  box-shadow: 2px 2px 4px black;
+}
+.icon{
+  height: 15px;
+  width: 15px;
+  margin-right: 5px;
+}
+#URLtwitter{
+  display: block;
+  text-decoration: none;
+  font-weight: 900;
+  background-color: rgb(1, 183, 255);
+  color:white;
+  padding: 0 10px 0;
+  box-shadow: 2px 2px 4px black;
+}
+#URLinstagram{
+  display: block;
+  text-decoration: none;
+  font-weight: 900;
+  background-color: rgb(255, 0, 157);
+  color:white;
+  padding: 0 10px 0;
+  box-shadow: 2px 2px 4px black;
+}
+.useritem{
+  width: 70vw;
+  margin: 50px auto 30px;
+}
+.useritemtitle{
+  text-align: center;
+  margin: 0px;
+  font-size: 60px;
+}
+.useritemcontents{
+  display: flex;
+  justify-content: space-around;
+}
+.useritemcontent{
+  width: 30%;
+  margin-top: 20px;
+  border: 3px solid black;
+  border-radius: 50px;
+}
+.useritemcontentimage{
+  height: 250px;
+  width: 250px;
+  margin: 10px auto 0;
+  border-radius: 30px;
+}
+.useritemcontenttitle{
+  text-align: center;
+  margin: 0;
+}

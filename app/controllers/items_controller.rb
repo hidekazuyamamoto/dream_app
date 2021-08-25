@@ -5,7 +5,7 @@ class ItemsController < ApplicationController
   def create
     @item=Item.new(params_item)
     if @item.save
-      redirect_to 
+      redirect_to dream_path(current_user.id)
     else
       render :new
     end

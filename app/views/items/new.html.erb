@@ -1,0 +1,26 @@
+<%= render "shared/header" %>
+<div class="main">
+  <%=form_with model: @item, class:"form", local: true do |f|%>
+    <h1 class="formmaintitle">支援要項追加</h1>
+    <div class="formcontens">
+      <p class="formtitle">画像</p>
+      <%= f.file_field :item_image, class:"fileformname" %>
+    </div>
+    <div class="formcontens">
+      <p class="formtitle">名前<span class="indispensable">*必須</span></p>
+      <%= f.text_field :name, class:"formname", maxlength:"20" %>
+    </div>
+    <div class="formcontens">
+      <p class="formtitle">説明</p>
+      <%= f.text_area :explanation, class:"formname" %>
+    </div>
+    <div class="formcontens">
+      <p class="formtitle">価格<span class="indispensable">*必須</span></p>
+      <%= f.text_field :price, class:"formname", maxlength:"20" %>
+    </div>
+    <div class="formcontens">
+      <%= f.submit "作成する" ,class:"submitbtn"%>
+    </div>
+  <%end%>
+</div>
+<%= render "shared/footer" %>

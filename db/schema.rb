@@ -39,6 +39,7 @@ ActiveRecord::Schema.define(version: 2021_08_25_020700) do
     t.bigint "user_id"
     t.integer "price"
     t.text "explanation"
+    t.string "name"
     t.index ["user_id"], name: "index_items_on_user_id"
   end
 

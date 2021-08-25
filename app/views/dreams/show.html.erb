@@ -101,24 +101,14 @@
   <div class="useritem">
     <h1 class="useritemtitle">支援要項</h1>
     <div class="useritemcontents">
+    <% @item.each do |item|%>
       <div class="useritemcontent">
         <div class="useritemcontentimage">
-          <%=image_tag "gal_o_man.png" ,class:"userimagecontent"%>
+          <%=image_tag item.item_image ,class:"userimagecontent"%>
         </div>
-        <h1 class="useritemcontenttitle">アイテム名</h1>
+        <h1 class="useritemcontenttitle"><%= item.name%></h1>
       </div>
-      <div class="useritemcontent">
-        <div class="useritemcontentimage">
-          <%=image_tag "gal_o_man.png" ,class:"userimagecontent"%>
-        </div>
-        <h1 class="useritemcontenttitle">アイテム名</h1>
-      </div>
-      <div class="useritemcontent">
-          <div class="useritemcontentimage">
-        <%=image_tag "gal_o_man.png" ,class:"userimagecontent"%>
-        </div>
-        <h1 class="useritemcontenttitle">アイテム名</h1>
-      </div>
+    <% end %>
     </div>
     <%= link_to "支援要項を追加する" ,new_item_path%>
   </div>

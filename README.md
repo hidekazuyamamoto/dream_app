@@ -1,7 +1,7 @@
 ## user
 | column         | type              | option                                         |
 |----------------|-------------------|------------------------------------------------|
-| name           | string            | null: false                                    |
+
 
 ### association
 has_one :main_profile
@@ -17,6 +17,8 @@ has_many :items
 | url_twitter    | string            |                                                |
 | url_facebook   | string            |                                                |
 | url_instagram  | string            |                                                |
+| name           | string            | null: false                                    |
+| user_profile   | text              |                                                |
 
 ### association
 belongs_to :user

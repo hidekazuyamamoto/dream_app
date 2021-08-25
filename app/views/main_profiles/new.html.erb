@@ -1,0 +1,30 @@
+<%= render "shared/header" %>
+<div class="main">
+  <%=form_with model: @main_profile, class:"form", local: true do |f|%>
+    <h1 class="formmaintitle">プロフィー設定</h1>
+    <div class="formcontens">
+    <p class="formtitle">ミッション<span class="indispensable">*必須</span></p>
+    <%= f.text_field :mission, class:"formname", maxlength:"20" %>
+    </div>
+    <div class="formcontens">
+    <p class="formtitle">ミッションの説明</p>
+    <%= f.text_area :mission_ex, class:"formname" %>
+    </div>
+    <div class="formcontens">
+    <p class="formtitle">twitter（URL）</p>
+    <%= f.text_field :URL_twitter, class:"formname" %>
+    </div>
+    <div class="formcontens">
+    <p class="formtitle">facebook（URL）</p>
+    <%= f.text_field :URL_facebook, class:"formname"%>
+    </div>
+    <div class="formcontens">
+    <p class="formtitle">instagram（URL）</p>
+    <%= f.text_field :URL_instagram, class:"formname" %>
+    </div>
+    <div class="formcontens">
+    <%= f.submit "登録する" ,class:"submitbtn"%>
+    </div>
+  <%end%>
+</div>
+<%= render "shared/footer" %>

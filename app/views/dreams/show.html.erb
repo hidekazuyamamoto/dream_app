@@ -59,7 +59,7 @@
           <%end%>
         </div>
       </div>
-      <%= link_to "編集する", new_main_profile_path%>
+      <%= link_to "編集する", edit_main_profile_path(current_user.id)%>
     </div>
   <%else%>
     <div class="profilecontents">

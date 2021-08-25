@@ -7,4 +7,5 @@ class User < ApplicationRecord
     validates :password
   end
   has_one :main_profile
+  has_many :items
 end

@@ -1,61 +1,99 @@
 <%= render "shared/header" %>
 <div class="main">
-  <div class="profilecontents">
-    <div class="profiles">
-      <div class="userprofiles">
-        <div class="userimage">
-        <%=image_tag "gal_o_man.png" ,class:"userimagecontent"%>
+  <%if @user.main_profile.present?%>
+    <div class="profilecontents">
+      <div class="profiles">
+        <div class="userprofiles">
+          <div class="userimage">
+          <%=image_tag "gal_o_man.png" ,class:"userimagecontent"%>
+          </div>
+          <div class="username">
+          <h1 class="usernamecontent"><%=@main_profile.name%></h1>
+          </div>
+          <div class="uesrexplanation">
+          <p class="uesrexplanationcontent"><%=@main_profile.user_profile%></p>
+          </div>
         </div>
-        <div class="username">
-        <h1 class="usernamecontent"><%=@user.name %> </h1>
-        </div>
-        <div class="uesrexplanation">
-        <p class="uesrexplanationcontent">せつめい</p>
+        <div class="usermissions">
+          <div class="usermission">
+          <h1 class="usermissioncontent"><%= @main_profile.mission%></h1>
+          </div>
+          <div class="usermissionexplanation">
+          <p class="usermissionexplanationcontent"><%= @main_profile.mission_ex %> </p>
+          </div>
         </div>
       </div>
-      <div class="usermissions">
-        <div class="usermission">
-        <h1 class="usermissioncontent"><%= @main_profile.mission%></h1>
+      <div class="SNSurls">
+        <div class="URLs">
+          <%if @main_profile.URL_facebook.present?%>
+            <%= link_to "#{@main_profile.URL_facebook}" ,id:"URLfacebook" do %>
+            <%=image_tag "icon_017870_256.png" ,class:"icon"%>
+            facebook
+            <%end%>
+          <%else%>
+            <a href="#" id="URLfacebook"><%=image_tag "icon_017870_256.png" ,class:"icon"%>facebook</a>
+          <%end%>
         </div>
-        <div class="usermissionexplanation">
-        <p class="usermissionexplanationcontent"><%= @main_profile.mission_ex %> </p>
+        <div class="URLs">
+          <%if @main_profile.URL_twitter.present?%>
+            <%= link_to "#{@main_profile.URL_twitter}" ,id:"URLtwitter" do %>
+            <%=image_tag "icon_017870_256.png" ,class:"icon"%>
+            twitter
+            <%end%>
+          <%else%>
+            <a href="#" id="URLtwitter"><%=image_tag "icon_017890_256.png" ,class:"icon"%>twitter</a>
+          <%end%>
+        </div>
+        <div class="URLs">
+          <%if @main_profile.URL_instagram.present?%>
+            <%= link_to "#{@main_profile.URL_instagram}" ,id:"URLinstagram" do %>
+            <%=image_tag "icon_017870_256.png" ,class:"icon"%>
+            instagram
+            <%end%>
+          <%else%>
+          <a href="#" id="URLinstagram"><%=image_tag "icon_062470_256.png" ,class:"icon"%>instagram</a>
+          <%end%>
         </div>
       </div>
+      <%= link_to "編集する", new_main_profile_path%>
     </div>
-    <div class="SNSurls">
-      <div class="URLs">
-        <%if @main_profile.URL_facebook.present?%>
-          <%= link_to "#{@main_profile.URL_facebook}" ,id:"URLfacebook" do %>
-          <%=image_tag "icon_017870_256.png" ,class:"icon"%>
-          facebook
-          <%end%>
-        <%else%>
-          <a href="#" id="URLfacebook"><%=image_tag "icon_017870_256.png" ,class:"icon"%>facebook</a>
-        <%end%>
+  <%else%>
+    <div class="profilecontents">
+      <div class="profiles">
+        <div class="userprofiles">
+          <div class="userimage">
+          <%=image_tag "gal_o_man.png" ,class:"userimagecontent"%>
+          </div>
+          <div class="username">
+          <h1 class="usernamecontent">名前を決めよう </h1>
+          </div>
+          <div class="uesrexplanation">
+          <p class="uesrexplanationcontent">自分のプロフィールを書こう</p>
+          </div>
+        </div>
+        <div class="usermissions">
+          <div class="usermission">
+          <h1 class="usermissioncontent">目標を決めよう</h1>
+          </div>
+          <div class="usermissionexplanation">
+          <p class="usermissionexplanationcontent">目標の説明</p>
+          </div>
+        </div>
       </div>
-      <div class="URLs">
-        <%if @main_profile.URL_twitter.present?%>
-          <%= link_to "#{@main_profile.URL_twitter}" ,id:"URLtwitter" do %>
-          <%=image_tag "icon_017870_256.png" ,class:"icon"%>
-          twitter
-          <%end%>
-        <%else%>
-          <a href="#" id="URLtwitter"><%=image_tag "icon_017890_256.png" ,class:"icon"%>twitter</a>
-        <%end%>
+      <div class="SNSurls">
+        <div class="URLs">
+            <a href="#" id="URLfacebook"><%=image_tag "icon_017870_256.png" ,class:"icon"%>facebook</a>
+        </div>
+        <div class="URLs">
+            <a href="#" id="URLtwitter"><%=image_tag "icon_017890_256.png" ,class:"icon"%>twitter</a>
+        </div>
+        <div class="URLs">
+          <a href="#" id="URLinstagram"><%=image_tag "icon_062470_256.png" ,class:"icon"%>instagram</a>
+        </div>
       </div>
-      <div class="URLs">
-        <%if @main_profile.URL_instagram.present?%>
-          <%= link_to "#{@main_profile.URL_instagram}" ,id:"URLinstagram" do %>
-          <%=image_tag "icon_017870_256.png" ,class:"icon"%>
-          instagram
-          <%end%>
-        <%else%>
-        <a href="#" id="URLinstagram"><%=image_tag "icon_062470_256.png" ,class:"icon"%>instagram</a>
-        <%end%>
-      </div>
+      <%= link_to "編集する", new_main_profile_path%>
     </div>
-    <%= link_to "編集する", new_main_profile_path%>
-  </div>
+  <%end%>
   <div class="useritem">
     <h1 class="useritemtitle">支援要項</h1>
     <div class="useritemcontents">

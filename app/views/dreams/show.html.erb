@@ -7,7 +7,7 @@
         <%=image_tag "gal_o_man.png" ,class:"userimagecontent"%>
         </div>
         <div class="username">
-        <h1 class="usernamecontent">名前</h1>
+        <h1 class="usernamecontent"><%=@user.name %> </h1>
         </div>
         <div class="uesrexplanation">
         <p class="uesrexplanationcontent">せつめい</p>
@@ -15,22 +15,43 @@
       </div>
       <div class="usermissions">
         <div class="usermission">
-        <h1 class="usermissioncontent">test</h1>
+        <h1 class="usermissioncontent"><%= @main_profile.mission%></h1>
         </div>
         <div class="usermissionexplanation">
-        <p class="usermissionexplanationcontent">test</p>
+        <p class="usermissionexplanationcontent"><%= @main_profile.mission_ex %> </p>
         </div>
       </div>
     </div>
     <div class="SNSurls">
       <div class="URLs">
-        <a href="#" id="URLfacebook"><%=image_tag "icon_017870_256.png" ,class:"icon"%>facebook</a>
+        <%if @main_profile.URL_facebook.present?%>
+          <%= link_to "#{@main_profile.URL_facebook}" ,id:"URLfacebook" do %>
+          <%=image_tag "icon_017870_256.png" ,class:"icon"%>
+          facebook
+          <%end%>
+        <%else%>
+          <a href="#" id="URLfacebook"><%=image_tag "icon_017870_256.png" ,class:"icon"%>facebook</a>
+        <%end%>
       </div>
       <div class="URLs">
-        <a href="#" id="URLtwitter"><%=image_tag "icon_017890_256.png" ,class:"icon"%>twitter</a>
+        <%if @main_profile.URL_twitter.present?%>
+          <%= link_to "#{@main_profile.URL_twitter}" ,id:"URLtwitter" do %>
+          <%=image_tag "icon_017870_256.png" ,class:"icon"%>
+          twitter
+          <%end%>
+        <%else%>
+          <a href="#" id="URLtwitter"><%=image_tag "icon_017890_256.png" ,class:"icon"%>twitter</a>
+        <%end%>
       </div>
       <div class="URLs">
+        <%if @main_profile.URL_instagram.present?%>
+          <%= link_to "#{@main_profile.URL_instagram}" ,id:"URLinstagram" do %>
+          <%=image_tag "icon_017870_256.png" ,class:"icon"%>
+          instagram
+          <%end%>
+        <%else%>
         <a href="#" id="URLinstagram"><%=image_tag "icon_062470_256.png" ,class:"icon"%>instagram</a>
+        <%end%>
       </div>
     </div>
     <%= link_to "編集する", new_main_profile_path%>

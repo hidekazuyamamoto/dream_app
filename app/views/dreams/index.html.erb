@@ -27,12 +27,14 @@
     <h1 class="concept-message">他の人の夢を見る</h1>
     </div>
     <div class="others-dreams-content">
-      <%@other_dreams.each do |other_dream|%>
-        <div class=others-dream>
-          <%=image_tag other_dream.image, class:"user-icon"%>
-          <h1 class="user-contents" ><%=other_dream.name%></h1>
-          <h1 class="user-contents"><%= other_dream.mission%></h1>
-        </div>
+      <%if @other_dreams.present?%>
+        <%@other_dreams.each do |other_dream|%>
+          <div class=others-dream>
+            <%=image_tag other_dream.image, class:"user-icon"%>
+            <h1 class="user-contents" ><%=other_dream.name%></h1>
+            <h1 class="user-contents"><%= other_dream.mission%></h1>
+          </div>
+        <%end%>
       <%end%>
     </div>
   </div>

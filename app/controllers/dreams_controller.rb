@@ -1,4 +1,5 @@
 class DreamsController < ApplicationController
+  before_action :authenticate_user!
   def index
     @other_dreams = MainProfile.where.not(user_id: current_user.id)
   end

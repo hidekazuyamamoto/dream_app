@@ -37,6 +37,7 @@
 .others-dreams-content{
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 .others-dream{
   height: 50vh;

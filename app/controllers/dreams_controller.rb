@@ -4,5 +4,6 @@ class DreamsController < ApplicationController
   def show
     @user = User.find(current_user.id)
     @main_profile = MainProfile.where(user_id: current_user.id).first
+    @item = Item.where(user_id: current_user.id)
   end
 end

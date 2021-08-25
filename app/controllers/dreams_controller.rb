@@ -1,5 +1,6 @@
 class DreamsController < ApplicationController
   def index
+    @other_dreams = MainProfile.where.not(user_id: current_user.id)
   end
   def show
     @user = User.find(current_user.id)

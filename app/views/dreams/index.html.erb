@@ -30,7 +30,7 @@
       <%if @other_dreams.present?%>
         <%@other_dreams.each do |other_dream|%>
           <div class=others-dream>
-            <%= link_to dream_path(other_dream.id), id:"contents" do%>
+            <%= link_to dream_path(other_dream.user_id), id:"contents" do%>
               <%=image_tag other_dream.image, class:"user-icon"%>
               <h1 class="user-contents" ><%=other_dream.name%></h1>
               <h1 class="user-contents">「<%= other_dream.mission%>」</h1>

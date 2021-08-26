@@ -59,7 +59,6 @@
           <%end%>
         </div>
       </div>
-      <%= link_to "編集する", edit_main_profile_path(current_user.id)%>
     </div>
   <%else%>
     <div class="profilecontents">
@@ -112,7 +111,6 @@
       <%end%>
     <% end %>
     </div>
-    <%= link_to "支援要項を追加する" ,new_item_path%>
   </div>
 </div>
 <%= render "shared/footer" %>

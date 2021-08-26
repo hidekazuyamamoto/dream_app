@@ -1,0 +1,16 @@
+.priceclac{
+  text-align: center;
+  padding: 30px;
+}
+.priceclacform{
+  height: 30px;
+  width: 100px;
+  font-size: 30px;
+  text-align: center;
+  margin-right: 10px;
+}
+.select-box{
+  height: 40px;
+  width: 200px;
+  font-size: 20px;
+}

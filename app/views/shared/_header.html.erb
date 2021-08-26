@@ -2,15 +2,18 @@
   <div class="title">
     <%= link_to "DREAM", root_path, class:"title-content" %>
   </div>
-  <div class="user-function">
-    <% if user_signed_in? %>
-      <div class="user-functions">
-      <%=link_to "ログアウト", destroy_user_session_path, method: :delete, class:"user-content" %> 
-      </div>
-      <div class="user-functions">
-      <%=link_to "マイページ", dream_path(current_user.id), class:"user-content" %>
-      </div>
+  <% if user_signed_in? %>
+    <div class ="nenucontents">
+    <%=image_tag "sozai_cman_jp_20210826135329.png", id:"menuicon"%>
+    <ul class="menuber hidden" id="menuber">
+      <li id="list1" class="lists">マイページへ</li>
+      <li id="list2" class="lists">ミッション変更</li>
+      <li id="list3" class="lists">支援要項変更</li>
+      <li id="list4" class="lists">ログアウト</li>
+    </ul>
+    </div>
     <%else%>
+    <div class="user-function">
       <div class="user-functions">
         <%=link_to "ログイン", new_user_session_path, class:"user-content" %> 
       </div>

@@ -9,21 +9,23 @@
         <h1><%= @item.name %></h1>
       </div>
       <div class="itemprice">
-      <h1>「<%=@item.price%>円」</h1>
+      <h1>「<span id="itemprice"><%=@item.price%></span>円」</h1>
       </div>
       <div class="priceclac">
-        <input type="text" class="priceclacform">個
-        <h1>~~~~~~円</h1>
+      <form>
+        <input type="text" class="priceclacform" id="itemcount">個
+      </form>
+        <h1><span id="calc-price">~~~~~</span>円</h1>
         </div>
     </div>
   </div>
   <%=form_with model: [@item,@sub_purchased_log], class:"form", local: true do |f|%>
     <h1 class="formmaintitle">情報記入</h1> 
     <div class="formcontens">
-      <%= f.text_field :quantitiy, class:"formname" %>
+      <%= f.text_field :quantitiy, class:"formname",id:"itemquantitiy" %>
     </div>
     <div class="formcontens">
-      <%= f.text_field :price, class:"formname" %>
+      <%= f.text_field :price, class:"formname", id:"item-price"%>
     </div>
     <div class="formcontens">
       <p class="formtitle">お名前<span class="indispensable">*必須</span></p>

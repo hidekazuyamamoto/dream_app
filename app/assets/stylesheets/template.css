@@ -1,6 +1,6 @@
 .header{
   height: 10vh;
-  background-color: aqua;
+  background-color:#99ccf2;
   display: flex;
   justify-content: space-between;
 }
@@ -35,6 +35,30 @@
   margin-left: 50px;
   text-decoration: none;
 }
+#menuicon{
+  height: 75px;
+  width: 100px;
+  position: absolute;
+  right: 10px;
+}
+.menuber{
+  position: absolute;
+  right: 10px;
+  top: 82px;
+  padding: 0;
+  background-color: white;
+  list-style: none;
+  font-size: 30px;
+  margin: 10px 0 10px 0;
+}
+.lists{
+  border: 1.5px solid black;
+  padding: 10px;
+}
+#lists_path{
+  text-decoration: none;
+  color: black;
+}
 .main{
   background-color: azure;
   padding: 60px 0 60px;
@@ -49,4 +73,7 @@
   margin-top: 0px;
   color: white;
   font-size: 30px;
+}
+.hidden{
+  display: none;
 }

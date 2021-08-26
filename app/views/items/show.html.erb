@@ -17,7 +17,7 @@
       </div>
     </div>
     <div class="purchsedbtn">
-      <%=link_to "購入する","#",id:"purchsedbtn"%>
+      <%=link_to "購入する",new_item_sub_purchased_log_path(@item.id),id:"purchsedbtn"%>
     </div>
   </div>
 <%= render "shared/footer" %>

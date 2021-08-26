@@ -73,6 +73,7 @@
   color: blue;
   padding: 0 10px 5px;
   box-shadow: 2px 2px 4px black;
+  border-radius: 30px;
 }
 .icon{
   height: 15px;
@@ -87,6 +88,7 @@
   color:white;
   padding: 0 10px 0;
   box-shadow: 2px 2px 4px black;
+  border-radius: 30px;
 }
 #URLinstagram{
   display: block;
@@ -96,6 +98,7 @@
   color:white;
   padding: 0 10px 0;
   box-shadow: 2px 2px 4px black;
+  border-radius: 30px;
 }
 .useritem{
   width: 70vw;

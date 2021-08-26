@@ -16,8 +16,14 @@
         </div>
       </div>
     </div>
-    <div class="purchsedbtn">
-      <%=link_to "購入する",new_item_sub_purchased_log_path(@item.id),id:"purchsedbtn"%>
-    </div>
+    <%if @item.user_id == current_user.id%>
+      <div class="purchsedbtn">
+        <%=link_to "編集する",edit_item_path(@item.id),id:"purchsedbtn"%>
+      </div>
+    <%else%>
+      <div class="purchsedbtn">
+        <%=link_to "購入する",new_item_sub_purchased_log_path(@item.id),id:"purchsedbtn"%>
+      </div>
+    <%end%>
   </div>
 <%= render "shared/footer" %>

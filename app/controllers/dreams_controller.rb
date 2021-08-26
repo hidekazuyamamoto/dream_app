@@ -8,8 +8,8 @@ class DreamsController < ApplicationController
     end
   end
   def show
-    @user = User.find(current_user.id)
-    @main_profile = MainProfile.where(user_id: current_user.id).first
-    @item = Item.where(user_id: current_user.id)
+    @user = User.find(params[:id])
+    @main_profile = MainProfile.where(user_id: @user.id).first
+    @item = Item.where(user_id: @user.id)
   end
 end

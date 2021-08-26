@@ -20,6 +20,9 @@
       <div class="purchsedbtn">
         <%=link_to "編集する",edit_item_path(@item.id),id:"purchsedbtn"%>
       </div>
+      <div class="purchsedbtn">
+        <%=link_to "削除する",item_path(@item.id), method: :delete ,id:"purchsedbtn"%>
+      </div>
     <%else%>
       <div class="purchsedbtn">
         <%=link_to "購入する",new_item_sub_purchased_log_path(@item.id),id:"purchsedbtn"%>

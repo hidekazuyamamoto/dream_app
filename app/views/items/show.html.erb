@@ -11,9 +11,11 @@
         <div class="itemprice">
         <h1>「<%=@item.price%>円」</h1>
         </div>
+        <%if @item.explanation.present?%>
         <div class="itemexplanationshow">
           <p><%=@item.explanation%></p>
         </div>
+        <%end%>
       </div>
     </div>
     <%if @item.user_id == current_user.id%>

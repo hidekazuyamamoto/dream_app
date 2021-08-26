@@ -110,9 +110,12 @@
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  
+}
+#useritemcontentURL{
+  text-decoration: none;
 }
 .useritemcontent{
-  width: 30%;
   margin-top: 20px;
   border: 3px solid black;
   border-radius: 50px;
@@ -126,4 +129,5 @@
 .useritemcontenttitle{
   text-align: center;
   margin: 0;
+  color: black;
 }

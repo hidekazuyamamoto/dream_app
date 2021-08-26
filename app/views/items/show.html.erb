@@ -1,0 +1,23 @@
+<%= render "shared/header" %>
+  <div class="main">
+    <div class="itemexplanations">
+      <div class="itemimage">
+        <%=image_tag @item.item_image, class:"itemimageshow"%>
+      </div>
+      <div class="itemexplanation">
+        <div class="itemname">
+          <h1><%= @item.name %></h1>
+        </div>
+        <div class="itemprice">
+        <h1>「<%=@item.price%>円」</h1>
+        </div>
+        <div class="itemexplanationshow">
+          <p><%=@item.explanation%></p>
+        </div>
+      </div>
+    </div>
+    <div class="purchsedbtn">
+      <%=link_to "購入する",new_item_sub_purchased_log_path(@item.id),id:"purchsedbtn"%>
+    </div>
+  </div>
+<%= render "shared/footer" %>

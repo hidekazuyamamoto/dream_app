@@ -1,0 +1,57 @@
+<%= render "shared/header" %>
+<div class="main">
+  <div class="itemexplanations">
+    <div class="itemimage">
+      <%=image_tag @item.item_image, class:"itemimageshow"%>
+    </div>
+    <div class="itemexplanation">
+      <div class="itemname">
+        <h1><%= @item.name %></h1>
+      </div>
+      <div class="itemprice">
+      <h1>「<%=@item.price%>円」</h1>
+      </div>
+      <div class="priceclac">
+        <input type="text" class="priceclacform">個
+        <h1>~~~~~~円</h1>
+        </div>
+    </div>
+  </div>
+  <%=form_with model: [@item,@sub_purchased_log], class:"form", local: true do |f|%>
+    <h1 class="formmaintitle">情報記入</h1> 
+    <div class="formcontens">
+      <%= f.text_field :quantitiy, class:"formname" %>
+    </div>
+    <div class="formcontens">
+      <%= f.text_field :price, class:"formname" %>
+    </div>
+    <div class="formcontens">
+      <p class="formtitle">お名前<span class="indispensable">*必須</span></p>
+      <%= f.text_field :name, class:"formname" %>
+    </div>
+    <div class="formcontens">
+      <p class="formtitle">郵便番号<span class="indispensable">*必須</span></p>
+      <%= f.text_field :postal_code, class:"formname", maxlength:"20" %>
+    </div>
+    <div class="formcontens">
+      <p class="formtitle">都道府県<span class="indispensable">*必須</span></p>
+      <%= f.collection_select(:area_id, Area.all, :id, :name, {}, {class:"select-box"}) %>
+    </div>
+    <div class="formcontens">
+      <p class="formtitle">市町村<span class="indispensable">*必須</span></p>
+      <%= f.text_field :city, class:"formname", maxlength:"20" %>
+    </div>
+    <div class="formcontens">
+      <p class="formtitle">住所<span class="indispensable">*必須</span></p>
+      <%= f.text_field :address, class:"formname", maxlength:"20" %>
+    </div>
+    <div class="formcontens">
+      <p class="formtitle">どこで知りましたか？</p>
+      <%= f.collection_select(:where_id, Where.all, :id, :name, {}, {class:"select-box"}) %>
+    </div>
+    <div class="formcontens">
+      <%= f.submit "作成する" ,class:"submitbtn"%>
+    </div>
+  <%end%>
+</div>
+<%= render "shared/footer" %>

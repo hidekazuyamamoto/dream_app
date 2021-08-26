@@ -54,7 +54,10 @@
 .lists{
   border: 1.5px solid black;
   padding: 10px;
-  
+}
+#lists_path{
+  text-decoration: none;
+  color: black;
 }
 .main{
   background-color: azure;

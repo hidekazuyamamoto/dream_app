@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_25_020700) do
+ActiveRecord::Schema.define(version: 2021_08_26_010922) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -55,6 +55,21 @@ ActiveRecord::Schema.define(version: 2021_08_25_020700) do
     t.string "name"
     t.text "user_profile"
     t.index ["user_id"], name: "index_main_profiles_on_user_id"
+  end
+
+  create_table "sub_purchased_logs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.bigint "item_id"
+    t.string "quantitiy"
+    t.string "price"
+    t.string "name", null: false
+    t.string "postal_code"
+    t.integer "area_id"
+    t.string "city"
+    t.string "address"
+    t.integer "where_id"
+    t.index ["item_id"], name: "index_sub_purchased_logs_on_item_id"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|

@@ -1,0 +1,2 @@
+class SubPurchasedLog < ApplicationRecord
+end

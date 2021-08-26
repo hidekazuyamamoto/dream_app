@@ -6,10 +6,10 @@
     <div class ="nenucontents">
     <%=image_tag "sozai_cman_jp_20210826135329.png", id:"menuicon"%>
     <ul class="menuber hidden" id="menuber">
-      <li id="list1" class="lists">マイページへ</li>
-      <li id="list2" class="lists">ミッション変更</li>
-      <li id="list3" class="lists">支援要項変更</li>
-      <li id="list4" class="lists">ログアウト</li>
+      <li id="list1" class="lists"><%=link_to "マイページ", dream_path(current_user.id)%></li>
+      <li id="list2" class="lists"><%=link_to "プロフィール編集", edit_main_profile_path(current_user.id)%></li>
+      <li id="list3" class="lists"><%=link_to "支援要項追加", new_item_path%></li>
+      <li id="list4" class="lists"><%=link_to "ログアウト", destroy_user_session_path, method: :delete %> </li>
     </ul>
     </div>
     <%else%>

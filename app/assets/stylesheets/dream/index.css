@@ -52,5 +52,11 @@
   margin: 0 auto;
 }
 .user-contents{
+  height: 30px;
   margin: 0px 0px 5px 0px;
+  text-decoration: none;
+}
+#contents{
+  text-decoration: none;
+  color: black;
 }

@@ -7,5 +7,5 @@ class Where < ActiveHash::Base
   ]
 
   include ActiveHash::Associations
-  has_many :sub_purchased_logs
+  has_many :sub_purchased_logs, dependent: :destroy
 end

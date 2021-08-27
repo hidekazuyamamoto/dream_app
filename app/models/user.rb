@@ -6,6 +6,6 @@ class User < ApplicationRecord
   with_options presence: true do
     validates :password
   end
-  has_one :main_profile
-  has_many :items
+  has_one :main_profile,  dependent: :destroy
+  has_many :items,  dependent: :destroy
 end

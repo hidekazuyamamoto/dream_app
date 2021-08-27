@@ -17,11 +17,6 @@
 
 
 
-## user
-| column         | type              | option                                         |
-|----------------|-------------------|------------------------------------------------|
-
-
 ### association
 has_one :main_profile
 has_one :sub_profile

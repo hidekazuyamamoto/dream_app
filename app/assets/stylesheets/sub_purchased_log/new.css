@@ -14,3 +14,26 @@
   width: 200px;
   font-size: 20px;
 }
+.info-input-haedline{
+  font-size: 30px;
+}
+.available-card{
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+.card-logo{
+  height: 50px;
+  width: 70px;
+}
+.input-expiration-date-wrap{
+  display: flex;
+  margin: 20px auto;
+  width: 30%;
+}
+.input-expiration-date{
+  height: 20px;
+  width: 50px;
+}
+.input-expiration-date-p{
+  margin: 0;
+}

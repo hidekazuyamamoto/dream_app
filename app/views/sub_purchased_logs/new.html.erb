@@ -13,13 +13,13 @@
       </div>
       <div class="priceclac">
       <form>
-        <input type="text" class="priceclacform" id="itemcount">個
+        <input type="text" class="priceclacform" id="itemcount">個（半角数字）
       </form>
         <h1><span id="calc-price">~~~~~</span>円</h1>
         </div>
     </div>
   </div>
-  <%=form_with model: [@item,@sub_purchased_log], class:"form", local: true do |f|%>
+  <%=form_with model: [@item,@sub_purchased_log], class:"form", id:"charge-form", local: true do |f|%>
     <h1 class="formmaintitle">情報記入</h1> 
     <div class="formcontens">
       <%= f.text_field :quantitiy, class:"formname",id:"itemquantitiy" %>
@@ -51,9 +51,9 @@
           <span class="indispensable">必須</span>
         </div>
         <div class='input-expiration-date-wrap'>
-          <%= f.text_area :card_exp_month, class:"input-expiration-date", id:"card-exp-month", placeholder:"例)3" %>
+          <%= f.text_area :card_exp_month, class:"input-expiration-date", id:"card-exp-month" %>
           <p class="input-expiration-date-p">月</p>
-          <%= f.text_area :card_exp_year, class:"input-expiration-date", id:"card-exp-year", placeholder:"例)23" %>
+          <%= f.text_area :card_exp_year, class:"input-expiration-date", id:"card-exp-year"%>
           <p class="input-expiration-date-p">年</p>
         </div>
       </div>
@@ -95,7 +95,7 @@
       <%= f.collection_select(:where_id, Where.all, :id, :name, {}, {class:"select-box"}) %>
     </div>
     <div class="formcontens">
-      <%= f.submit "作成する" ,class:"submitbtn"%>
+      <%= f.submit "作成する" ,class:"submitbtn", id:"button"%>
     </div>
   <%end%>
 </div>

@@ -20,7 +20,8 @@
 ## user
 | column         | type              | option                                         |
 |----------------|-------------------|------------------------------------------------|
-
+| email          | string            | nill: false                                    |
+| password       | string            | nill: false                                    |
 
 ### association
 has_one :main_profile

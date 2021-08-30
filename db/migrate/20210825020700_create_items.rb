@@ -6,7 +6,7 @@ class CreateItems < ActiveRecord::Migration[6.0]
       t.references :user, nill: false, foreign_key: true
       t.integer :price, nill: false
       t.text :explanation, nill: false
-      t.string :name, nill: false
+      t.string :item_name, nill: false
     end
   end
 end

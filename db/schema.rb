@@ -39,7 +39,7 @@ ActiveRecord::Schema.define(version: 2021_08_26_010922) do
     t.bigint "user_id"
     t.integer "price"
     t.text "explanation"
-    t.string "name"
+    t.string "item_name"
     t.index ["user_id"], name: "index_items_on_user_id"
   end
 
@@ -52,7 +52,7 @@ ActiveRecord::Schema.define(version: 2021_08_26_010922) do
     t.string "URL_twitter"
     t.string "URL_facebook"
     t.string "URL_instagram"
-    t.string "name"
+    t.string "user_name"
     t.text "user_profile"
     t.index ["user_id"], name: "index_main_profiles_on_user_id"
   end
@@ -63,7 +63,7 @@ ActiveRecord::Schema.define(version: 2021_08_26_010922) do
     t.bigint "item_id"
     t.string "quantitiy"
     t.string "price"
-    t.string "name", null: false
+    t.string "purchased_name", null: false
     t.string "postal_code"
     t.integer "area_id"
     t.string "city"

@@ -17,7 +17,7 @@ class SubPurchasedLogsController < ApplicationController
     end
   end
   def params_sub_purchased_log
-    params.require(:sub_purchased_log).permit(:quantitiy, :price, :name, :postal_code, :area_id, :city, :address, :where_id).merge(item_id: params[:item_id], token: params[:token])
+    params.require(:sub_purchased_log).permit(:quantitiy, :price, :purchased_name, :postal_code, :area_id, :city, :address, :where_id).merge(item_id: params[:item_id], token: params[:token])
   end 
   def payjp
     Payjp.api_key = ENV["PAYJP_SECRET_KEY"]

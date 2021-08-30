@@ -9,7 +9,7 @@ class CreateMainProfiles < ActiveRecord::Migration[6.0]
       t.string :URL_twitter
       t.string :URL_facebook
       t.string :URL_instagram
-      t.string :name, nill: false
+      t.string :user_name, nill: false
       t.text :user_profile
     end
   end

@@ -12,7 +12,7 @@
           <%end%>
           </div>
           <div class="username">
-          <h1 class="usernamecontent"><%=@main_profile.name%></h1>
+          <h1 class="usernamecontent"><%=@main_profile.user_name%></h1>
           </div>
           <div class="uesrexplanation">
           <p class="uesrexplanationcontent"><%=@main_profile.user_profile%></p>
@@ -106,7 +106,7 @@
           <div class="useritemcontentimage">
             <%=image_tag item.item_image ,class:"userimagecontent"%>
           </div>
-          <h1 class="useritemcontenttitle"><%= item.name%></h1>
+          <h1 class="useritemcontenttitle"><%= item.item_name%></h1>
         </div>
       <%end%>
     <% end %>

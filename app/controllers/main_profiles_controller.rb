@@ -14,7 +14,8 @@ class MainProfilesController < ApplicationController
     @main_profile = MainProfile.where(user_id: params[:id]).first
   end
   def update
-    @main_profile = MainProfile.where(user_id: params[:id]).first
+    binding.pry
+    @main_profile = MainProfile.where(user_id: current_user.id).first
     if @main_profile.update(params_main_profile)
       redirect_to dream_path(current_user.id)
     else
@@ -23,6 +24,6 @@ class MainProfilesController < ApplicationController
   end
   private
   def params_main_profile
-    params.require(:main_profile).permit(:name, :user_profile, :image, :mission, :mission_ex, :URL_twitter, :URL_facebook, :URL_instagram).merge(user_id: current_user.id)
+    params.require(:main_profile).permit(:user_name, :user_profile, :image, :mission, :mission_ex, :URL_twitter, :URL_facebook, :URL_instagram).merge(user_id: current_user.id)
   end
 end

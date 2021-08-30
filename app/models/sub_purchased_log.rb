@@ -9,7 +9,7 @@ class SubPurchasedLog < ApplicationRecord
   with_options presence: true do
     validates :quantitiy
     validates :price
-    validates :name
+    validates :purchased_name
     validates :postal_code
     validates :city
     validates :address

@@ -50,6 +50,7 @@
   list-style: none;
   font-size: 30px;
   margin: 10px 0 10px 0;
+  z-index:2;
 }
 .lists{
   border: 1.5px solid black;

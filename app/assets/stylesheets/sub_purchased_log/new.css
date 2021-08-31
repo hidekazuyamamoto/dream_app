@@ -37,3 +37,37 @@
 .input-expiration-date-p{
   margin: 0;
 }
+.purchased_con{
+  position: absolute;
+  top:50px;
+  right: 350px;
+  height: 40%;
+  width: 50%;
+  background-color:rgb(252, 253, 229);
+  text-align: center;
+  z-index:2;
+}
+.purchased_con_btn{
+  height: 50px;
+  width: 200px;
+  font-size: 20px;
+  margin-top: 50px;
+  background-color: blanchedalmond;
+  border-radius: 30px;
+}
+.purchased_mes1{
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+.purchased_mes2{
+  margin: 0;
+}
+#purchased_btn{
+  border: 3px solid black;
+  width: 30%;
+  margin: 0 auto 50px;
+  font-size: 30px;
+  border-radius: 50px;
+  background-color: rgb(255, 242, 224);
+  box-shadow: 2px 2px 2px black;
+}

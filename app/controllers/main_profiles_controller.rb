@@ -14,7 +14,6 @@ class MainProfilesController < ApplicationController
     @main_profile = MainProfile.where(user_id: params[:id]).first
   end
   def update
-    binding.pry
     @main_profile = MainProfile.where(user_id: current_user.id).first
     if @main_profile.update(params_main_profile)
       redirect_to dream_path(current_user.id)

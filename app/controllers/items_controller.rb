@@ -1,4 +1,7 @@
 class ItemsController < ApplicationController
+
+  before_action :item_set, except: [:new, :create]
+  
   def new
     @item=Item.new
   end
@@ -11,13 +14,10 @@ class ItemsController < ApplicationController
     end
   end
   def show
-    @item = Item.find(params[:id])
   end
   def edit
-    @item = Item.find(params[:id])
   end
   def update
-    @item = Item.find(params[:id])
     if @item.update(params_item)
       redirect_to dream_path(current_user.id)
     else
@@ -25,12 +25,16 @@ class ItemsController < ApplicationController
     end
   end
   def destroy
-    @item = Item.find(params[:id])
     @item.destroy
     redirect_to dream_path(current_user.id)
   end
+
   private
+
   def params_item
     params.require(:item).permit(:item_image, :item_name, :explanation, :price).merge(user_id: current_user.id)
+  end
+  def item_set
+    @item = Item.find(params[:id])
   end
 end

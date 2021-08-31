@@ -75,6 +75,15 @@
   box-shadow: 2px 2px 4px black;
   border-radius: 30px;
 }
+#URLfacebooknone{
+  display: block;
+  text-decoration: none;
+  font-weight: 900;
+  background-color: rgb(165, 165, 165);
+  color: rgb(56, 56, 56);
+  padding: 0 10px 5px;
+  border-radius: 30px;
+}
 .icon{
   height: 15px;
   width: 15px;
@@ -90,6 +99,15 @@
   box-shadow: 2px 2px 4px black;
   border-radius: 30px;
 }
+#URLtwitternone{
+  display: block;
+  text-decoration: none;
+  font-weight: 900;
+  background-color: rgb(165, 165, 165);
+  color: rgb(56, 56, 56);
+  padding: 0 10px 0;
+  border-radius: 30px;
+}
 #URLinstagram{
   display: block;
   text-decoration: none;
@@ -98,6 +116,15 @@
   color:white;
   padding: 0 10px 0;
   box-shadow: 2px 2px 4px black;
+  border-radius: 30px;
+}
+#URLinstagramnone{
+  display: block;
+  text-decoration: none;
+  font-weight: 900;
+  background-color: rgb(165, 165, 165);
+  color: rgb(56, 56, 56);
+  padding: 0 10px 0;
   border-radius: 30px;
 }
 .limit-contents{

@@ -95,20 +95,28 @@
         </div>
       </div>
     </div>
+    <div class="limit-contents">
+    <h1 class="limit-mes">残り時間まで</h1>
+    <h1 class="limit-time">あと〜日〜時間〜分〜秒！！</h1>
+    </div>
   <%end%>
   <div class="useritem">
     <h1 class="useritemtitle">支援要項</h1>
     <div class="useritemcontents">
-    <% @item.each do |item|%>
-      <%=link_to item_path(item.id) ,id:"useritemcontentURL" do %>
-        <div class="useritemcontent">
-          <div class="useritemcontentimage">
-            <%=image_tag item.item_image ,class:"userimagecontent"%>
+    <%if @item.present?%>
+      <% @item.each do |item|%>
+        <%=link_to item_path(item.id) ,id:"useritemcontentURL" do %>
+          <div class="useritemcontent">
+            <div class="useritemcontentimage">
+              <%=image_tag item.item_image ,class:"userimagecontent"%>
+            </div>
+            <h1 class="useritemcontenttitle"><%= item.item_name%></h1>
           </div>
-          <h1 class="useritemcontenttitle"><%= item.item_name%></h1>
-        </div>
+        <%end%>
       <%end%>
-    <% end %>
+    <%else%>
+    <h1 class="itemmes">寄付を募る、商品を追加しよう！！</h1>
+    <%end%>
     </div>
   </div>
 </div>

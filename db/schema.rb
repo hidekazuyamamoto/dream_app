@@ -54,6 +54,7 @@ ActiveRecord::Schema.define(version: 2021_08_26_010922) do
     t.string "URL_instagram"
     t.string "user_name"
     t.text "user_profile"
+    t.datetime "dead_line"
     t.index ["user_id"], name: "index_main_profiles_on_user_id"
   end
 

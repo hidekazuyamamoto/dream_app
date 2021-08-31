@@ -11,6 +11,7 @@ class CreateMainProfiles < ActiveRecord::Migration[6.0]
       t.string :URL_instagram
       t.string :user_name, nill: false
       t.text :user_profile
+      t.datetime :dead_line, nill: false
     end
   end
 end

@@ -10,13 +10,13 @@ function display(){
     menuicon.removeAttribute("style", "border: 3px solid black;")
   })
   menuicon.addEventListener("click",()=>{
-    if(menuber.getAttribute("style") == "display: block"){
-        menuber.removeAttribute("style" ,"display: block;")
-    }else{
         fadeLayer.setAttribute("style", "display: block")
-        fadeLayer.style.height = document.body.scrollHeight+"px"
+        fadeLayer.style.height = body_height+"px"
         menuber.setAttribute("style", "display: block")
-    }
+  })
+  fadeLayer.addEventListener("click",()=>{
+    menuber.removeAttribute("style" ,"display: block;")
+    fadeLayer.removeAttribute("style", "display: block")
   })
 }
 window.addEventListener("load", display)

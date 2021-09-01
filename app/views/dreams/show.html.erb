@@ -60,6 +60,10 @@
         </div>
       </div>
     </div>
+    <div class="limit-contents">
+      <h1 class="limit-mes">目標達成期限まで</h1>
+      <h1 class="limit-time" id="limit-time"><%=@main_profile.dead_line %></h1>
+    </div>
   <%else%>
     <div class="profilecontents">
       <div class="profiles">
@@ -83,10 +87,6 @@
           </div>
         </div>
       </div>
-    </div>
-    <div class="limit-contents">
-    <h1 class="limit-mes">残り時間まで</h1>
-    <h1 class="limit-time">あと〜日〜時間〜分〜秒！！</h1>
     </div>
   <%end%>
   <div class="useritem">

@@ -1,6 +1,10 @@
 class MainProfile < ApplicationRecord
   belongs_to :user
   has_one_attached :image, dependent: :destroy
-  validates :user_name, presence: true
-  validates :mission, presence: true
+  
+  with_options presence: true do
+    validates :user_name
+    validates :dead_line
+    validates :mission
+  end
 end

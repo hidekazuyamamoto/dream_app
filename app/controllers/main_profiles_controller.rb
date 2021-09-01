@@ -23,6 +23,6 @@ class MainProfilesController < ApplicationController
   end
   private
   def params_main_profile
-    params.require(:main_profile).permit(:user_name, :user_profile, :image, :mission, :mission_ex, :URL_twitter, :URL_facebook, :URL_instagram).merge(user_id: current_user.id)
+    params.require(:main_profile).permit(:user_name, :user_profile, :image, :mission, :mission_ex, :URL_twitter, :URL_facebook, :URL_instagram, :dead_line).merge(user_id: current_user.id)
   end
 end

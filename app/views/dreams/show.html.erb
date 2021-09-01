@@ -35,7 +35,7 @@
             facebook
             <%end%>
           <%else%>
-            <a href="#" id="URLfacebook"><%=image_tag "icon_017870_256.png" ,class:"icon"%>facebook</a>
+            <a href="#" id="URLfacebooknone"><%=image_tag "icon_017870_256.png" ,class:"icon"%>facebook</a>
           <%end%>
         </div>
         <div class="URLs">
@@ -45,7 +45,7 @@
             twitter
             <%end%>
           <%else%>
-            <a href="#" id="URLtwitter"><%=image_tag "icon_017890_256.png" ,class:"icon"%>twitter</a>
+            <a href="#" id="URLtwitternone"><%=image_tag "icon_017890_256.png" ,class:"icon"%>twitter</a>
           <%end%>
         </div>
         <div class="URLs">
@@ -55,10 +55,14 @@
             instagram
             <%end%>
           <%else%>
-          <a href="#" id="URLinstagram"><%=image_tag "icon_062470_256.png" ,class:"icon"%>instagram</a>
+          <a href="#" id="URLinstagramnone"><%=image_tag "icon_062470_256.png" ,class:"icon"%>instagram</a>
           <%end%>
         </div>
       </div>
+    </div>
+    <div class="limit-contents">
+      <h1 class="limit-mes">目標達成期限まで</h1>
+      <h1 class="limit-time" id="limit-time"><%=@main_profile.dead_line %></h1>
     </div>
   <%else%>
     <div class="profilecontents">
@@ -83,32 +87,25 @@
           </div>
         </div>
       </div>
-      <div class="SNSurls">
-        <div class="URLs">
-            <a href="#" id="URLfacebook"><%=image_tag "icon_017870_256.png" ,class:"icon"%>facebook</a>
-        </div>
-        <div class="URLs">
-            <a href="#" id="URLtwitter"><%=image_tag "icon_017890_256.png" ,class:"icon"%>twitter</a>
-        </div>
-        <div class="URLs">
-          <a href="#" id="URLinstagram"><%=image_tag "icon_062470_256.png" ,class:"icon"%>instagram</a>
-        </div>
-      </div>
     </div>
   <%end%>
   <div class="useritem">
     <h1 class="useritemtitle">支援要項</h1>
     <div class="useritemcontents">
-    <% @item.each do |item|%>
-      <%=link_to item_path(item.id) ,id:"useritemcontentURL" do %>
-        <div class="useritemcontent">
-          <div class="useritemcontentimage">
-            <%=image_tag item.item_image ,class:"userimagecontent"%>
+    <%if @item.present?%>
+      <% @item.each do |item|%>
+        <%=link_to item_path(item.id) ,id:"useritemcontentURL" do %>
+          <div class="useritemcontent">
+            <div class="useritemcontentimage">
+              <%=image_tag item.item_image ,class:"userimagecontent"%>
+            </div>
+            <h1 class="useritemcontenttitle"><%= item.item_name%></h1>
           </div>
-          <h1 class="useritemcontenttitle"><%= item.item_name%></h1>
-        </div>
+        <%end%>
       <%end%>
-    <% end %>
+    <%else%>
+    <h1 class="itemmes">寄付を募る、商品を追加しよう！！</h1>
+    <%end%>
     </div>
   </div>
 </div>

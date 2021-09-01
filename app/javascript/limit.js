@@ -29,6 +29,7 @@ function set_time_loop(dead_line_time){
   document.getElementById("limit-time").innerHTML = limit_time
 }
 function set_time(){
+  if (document.getElementById("limit-time")!=null){
   const dead_line_time = new Date(document.getElementById("limit-time").innerHTML)
   const time_int = set_time_calc(dead_line_time)
   console.log(time_int)
@@ -44,6 +45,7 @@ function set_time(){
     document.getElementById("limit-time").innerHTML = limit_time
     setInterval(set_time_loop, 1000, dead_line_time)
   }
+}
 }
 
 window.addEventListener("load", set_time)

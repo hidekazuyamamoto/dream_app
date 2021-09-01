@@ -5,6 +5,7 @@ function purchased(){
   const body_height = document.body.scrollHeight
   const body = document.body
   const position = body.top
+  if (document.getElementById("purchased_btn")!=null){
   purchased_btn.addEventListener('click',()=>{
     scrollTo(0, position);
     fadeLayer.setAttribute("style","display:block;")
@@ -14,5 +15,6 @@ function purchased(){
   fadeLayer.addEventListener("click", ()=>{
     purchased_mes.removeAttribute("style", "display:block;")
   })
+}
 }
 window.addEventListener('load',purchased)

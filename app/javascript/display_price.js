@@ -1,4 +1,5 @@
 function calcprice(){
+  if (document.getElementById("itemprice")!=null){
   const price= document.getElementById("itemprice").innerHTML
   const price_int= Number(price)
   const item_count=document.getElementById("itemcount")
@@ -16,5 +17,6 @@ function calcprice(){
     item_price_con.innerHTML= item_count_int*price_int
 
   })
+}
 }
 window.addEventListener("load",calcprice)

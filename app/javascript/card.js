@@ -1,5 +1,6 @@
 function card(){
   Payjp.setPublicKey(process.env.PAYJP_PUBLIC_KEY);
+  if (document.getElementById("button")!=null){
   const submit = document.getElementById("button");
   submit.addEventListener("click", (e) => {
     e.preventDefault();
@@ -26,5 +27,6 @@ function card(){
     });
 
   })
+}
 }
   window.addEventListener("load",card)

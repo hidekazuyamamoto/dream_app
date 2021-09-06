@@ -1,4 +1,7 @@
 class MainProfilesController < ApplicationController
+  before_action :authenticate_user!
+  before_action :move_to_index_new, only: [:new, :create]
+  before_action :move_to_index, only: [:edit, :update]
   def new
     @main_profile = MainProfile.new
   end
@@ -24,5 +27,15 @@ class MainProfilesController < ApplicationController
   private
   def params_main_profile
     params.require(:main_profile).permit(:user_name, :user_profile, :image, :mission, :mission_ex, :URL_twitter, :URL_facebook, :URL_instagram, :dead_line).merge(user_id: current_user.id)
+  end
+  def move_to_index_new
+    if MainProfile.exists?(user_id: current_user.id)
+      redirect_to root_path
+    end
+  end
+  def move_to_index
+      if current_user.id != params[:id]
+        redirect_to root_path
+      end
   end
 end

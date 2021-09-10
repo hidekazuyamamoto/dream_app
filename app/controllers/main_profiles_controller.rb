@@ -1,7 +1,6 @@
 class MainProfilesController < ApplicationController
   before_action :authenticate_user!
   before_action :move_to_index_new, only: [:new, :create]
-  before_action :move_to_index, only: [:edit, :update]
   def new
     @main_profile = MainProfile.new
   end
@@ -14,7 +13,7 @@ class MainProfilesController < ApplicationController
     end
   end
   def edit
-    @main_profile = MainProfile.where(user_id: params[:id]).first
+    @main_profile = MainProfile.where(user_id: current_user.id).first
   end
   def update
     @main_profile = MainProfile.where(user_id: current_user.id).first
@@ -32,10 +31,5 @@ class MainProfilesController < ApplicationController
     if MainProfile.exists?(user_id: current_user.id)
       redirect_to root_path
     end
-  end
-  def move_to_index
-      if current_user.id != params[:id]
-        redirect_to root_path
-      end
   end
 end
